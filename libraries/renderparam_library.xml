@@ -81,7 +81,7 @@
     </rule>
   </replace>
   <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_station_position']">
-    <rule name="dbglodrule_station_position" range="400000.0" sizecontrib="75" speed="3.0" lodradius0="100" lodradius1="50" lodradius2="30" lodradius3="15">
+    <rule name="dbglodrule_station_position" range="400000.0" sizecontrib="75" speed="3.0" lodradius0="10" lodradius1="5" lodradius2="1.75" lodradius3="0.25">
       <connections>
         <tag name="position" />
         <tag name="station" />
