@@ -1,2 +1,2 @@
 # Ultra-Draw-Distance
-Increses draw distance and increasing average FPS value due to setting up LoD values properly.
+Increses draw distance and average FPS value due to setting up LoD values properly.
