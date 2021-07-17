@@ -135,14 +135,14 @@
     </rule>
   </replace>
   <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_s']">
-    <rule name="dbglodrule_detail_s" range="5000.0" sizecontrib="100" speed="2.0" lodradius0="14" lodradius1="10" lodradius2="7" lodradius3="1">
+    <rule name="dbglodrule_detail_s" range="25000.0" sizecontrib="100" speed="2.0" lodradius0="14" lodradius1="10" lodradius2="7" lodradius3="1">
       <connections>
         <tag name="detail_s" />
       </connections>
     </rule>
   </replace>
   <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_xs']">
-    <rule name="dbglodrule_detail_xs" range="2500.0" sizecontrib="100" speed="2.0" lodradius0="13" lodradius1="9" lodradius2="6" lodradius3="1">
+    <rule name="dbglodrule_detail_xs" range="15000.0" sizecontrib="100" speed="2.0" lodradius0="13" lodradius1="9" lodradius2="6" lodradius3="1">
       <connections>
         <tag name="detail_xs" />
       </connections>
