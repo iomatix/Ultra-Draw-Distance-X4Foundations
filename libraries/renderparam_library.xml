@@ -1,77 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- maximum render range (LOD's will be distributed over this given range) in meters for a 1280:720 mainscene (19-22" LCD computer screen), size contribution in percent, fadespeed in seconds 0.5 is allowed -->
 <diff>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_pointlight']">
-    <rule name="dbglodrule_pointlight" lodradius0="0.0" lodradius1="0.0" lodradius2="0.0" lodradius3="0.0">
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_pointlight']">
+    <rule name="dbglodrule_pointlight" lodradius0="2" lodradius1="2" lodradius2="2" lodradius3="0.75">
       <connections>
-        <tag name="pointlight_lodtag"/>
+        <tag name="pointlight_lodtag" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_spotlight']">
-    <rule name="dbglodrule_spotlight" lodradius0="0.0" lodradius1="0.0" lodradius2="0.0" lodradius3="0.0">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_spotlight']">
+    <rule name="dbglodrule_spotlight" lodradius0="2" lodradius1="2" lodradius2="2" lodradius3="0.75">
       <connections>
-        <tag name="spotlight_lodtag"/>
+        <tag name="spotlight_lodtag" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_arealight']">
-    <rule name="dbglodrule_arealight" lodradius0="0.0" lodradius1="0.0" lodradius2="0.0" lodradius3="0.0">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_arealight']">
+    <rule name="dbglodrule_arealight" lodradius0="2" lodradius1="2" lodradius2="2" lodradius3="0.75">
       <connections>
-        <tag name="arealight_lodtag"/>
+        <tag name="arealight_lodtag" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_boxlight']">
-    <rule name="dbglodrule_boxlight" lodradius0="0.0" lodradius1="0.0" lodradius2="0.0" lodradius3="0.0">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_boxlight']">
+    <rule name="dbglodrule_boxlight" lodradius0="2" lodradius1="2" lodradius2="2" lodradius3="0.75">
       <connections>
-        <tag name="boxlight_lodtag"/>
+        <tag name="boxlight_lodtag" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_cluster']">
-    <rule name="dbglodrule_cluster" range="5000000.0" sizecontrib="100" speed="20.0" lodradius0="50" lodradius1="25" lodradius2="0.75" lodradius3="0.5">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_cluster']">
+    <rule name="dbglodrule_cluster" range="5000000.0" sizecontrib="100" speed="20.0" lodradius0="50" lodradius1="25" lodradius2="0.75" lodradius3="0.5" >
       <connections>
-        <tag name="cluster_l_detail"/>
+        <tag name="cluster_l_detail" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_default']">
-    <rule name="dbglodrule_default" range="40000.0" sizecontrib="100" speed="10.0">
-      <connections>
-        <tag name="default_lodtag"/>
-      </connections>
-    </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_1']">
-    <rule name="dbglodrule_1" range="400000.0" sizecontrib="100" speed="3.0" lodradius0="10" lodradius1="5" lodradius2="1.75" lodradius3="0.25">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_1']">
+    <rule name="dbglodrule_1" range="40000.0" sizecontrib="100" speed="2.0" lodradius0="10" lodradius1="5" lodradius2="1.75" lodradius3="0.25">
       <connections>
         <tag name="destructible" />
         <tag name="storage" />
         <tag name="positional" />
         <tag name="production" />
         <tag name="habitation" />
+        <tag name="welfaremodule" />
         <tag name="dockarea" />
         <tag name="radar" />
         <tag name="buildmodule" />
-        <tag name="buildstorage"/>
         <tag name="connectionmodule"/>
         <tag name="defencemodule"/>
         <tag name="pier"/>
-        <tag name="module"/>
-        <tag name="detail"/>
-      </connections>
-    </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_gates']">
-    <rule name="dbglodrule_gates" range="400000.0" sizecontrib="75" speed="3.0" priority="1" lodradius0="200" lodradius1="80" lodradius2="10" lodradius3="0.25">
+	    <tag name="module"/>
+	    <tag name="detail"/>		
+	  </connections>
+	</rule>  
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_gates']">
+    <rule name="dbglodrule_gates" range="30000.0" sizecontrib="100" speed="2.0" priority="1" lodradius0="40" lodradius1="20" lodradius2="10" lodradius3="1">
       <connections>
         <tag name="gate" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_highway']">
-    <rule name="dbglodrule_highway" range="400000.0" sizecontrib="75" speed="3.0" priority="1" lodradius0="200" lodradius1="80" lodradius2="10" lodradius3="0.25">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_highway']">
+    <rule name="dbglodrule_highway" range="30000.0" sizecontrib="100" speed="2.0" priority="1" lodradius0="40" lodradius1="20" lodradius2="10" lodradius3="1">
       <connections>
         <tag name="highwayentrygate" />
         <tag name="highwayexitgate" />
@@ -79,17 +71,17 @@
         <tag name="exitgate" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_station_position']">
-    <rule name="dbglodrule_station_position" range="400000.0" sizecontrib="75" speed="3.0" lodradius0="10" lodradius1="5" lodradius2="1.75" lodradius3="0.25">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_station_position']">
+    <rule name="dbglodrule_station_position" range="40000.0" sizecontrib="50" speed="2.0" lodradius0="10" lodradius1="5" lodradius2="3.5" lodradius3="1.4">
       <connections>
         <tag name="position" />
         <tag name="station" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_2']">
-    <rule name="dbglodrule_2" range="200000.0" sizecontrib="75" speed="3.0" lodradius0="50" lodradius1="30" lodradius2="20" lodradius3="4">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_2']">
+    <rule name="dbglodrule_2" range="200000.0" sizecontrib="100" speed="2.0">
       <connections>
         <tag name="adsign" />
         <tag name="adspot" />
@@ -98,215 +90,232 @@
         <tag name="street" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_billboard']">
-    <rule name="dbglodrule_billboard" range="200000.0" sizecontrib="100" speed="3.0" lodradius0="50" lodradius1="30" lodradius2="20" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_billboard']">
+    <rule name="dbglodrule_billboard" range="15000.0" sizecontrib="100" speed="1.0">
       <connections>
         <tag name="billboard" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_xxl']">
-    <rule name="dbglodrule_detail_xxl" range="400000.0" sizecontrib="100" speed="2.0" lodradius0="20" lodradius1="15" lodradius2="10" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_xxl']">
+    <rule name="dbglodrule_detail_xxl" range="16000.0" sizecontrib="100" speed="1.0"  lodradius0="0.5" lodradius1="0.5" lodradius2="0.5" lodradius3="0.25">
       <connections>
         <tag name="detail_xxl" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_xl']">
-    <rule name="dbglodrule_detail_xl" range="350000.0" sizecontrib="100" speed="2.0" lodradius0="18" lodradius1="14" lodradius2="8" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_xl']">
+    <rule name="dbglodrule_detail_xl" range="16000.0" sizecontrib="100" speed="1.0"  lodradius0="1.25" lodradius1="1.25" lodradius2="1.25" lodradius3="1">
       <connections>
         <tag name="detail_xl" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_l']">
-    <rule name="dbglodrule_detail_l" range="200000.0" sizecontrib="100" speed="2.0" lodradius0="15" lodradius1="10" lodradius2="8" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_l']">
+    <rule name="dbglodrule_detail_l" range="8000.0" sizecontrib="100" speed="1.0"  lodradius0="5" lodradius1="5" lodradius2="5" lodradius3="1.25">
       <connections>
         <tag name="detail_l" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_m']">
-    <rule name="dbglodrule_detail_m" range="100000.0" sizecontrib="100" speed="2.0" lodradius0="15" lodradius1="10" lodradius2="8" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_m']">
+    <rule name="dbglodrule_detail_m" range="4000.0" sizecontrib="100" speed="1.0" lodradius0="7.5" lodradius1="7.5" lodradius2="7.5" lodradius3="5">
       <connections>
         <tag name="detail_m" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_s']">
-    <rule name="dbglodrule_detail_s" range="25000.0" sizecontrib="100" speed="2.0" lodradius0="14" lodradius1="10" lodradius2="7" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_s']">
+    <rule name="dbglodrule_detail_s" range="2000.0" sizecontrib="100" speed="1.0" lodradius0="20" lodradius1="20" lodradius2="20" lodradius3="15">
       <connections>
         <tag name="detail_s" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_xs']">
-    <rule name="dbglodrule_detail_xs" range="15000.0" sizecontrib="100" speed="2.0" lodradius0="13" lodradius1="9" lodradius2="6" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_detail_xs']">
+    <rule name="dbglodrule_detail_xs" range="1000.0" sizecontrib="100" speed="1.0" lodradius0="50" lodradius1="50" lodradius2="50" lodradius3="40">
       <connections>
         <tag name="detail_xs" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_bullet']">
-    <rule name="dbglodrule_bullet" range="400000.0" sizecontrib="100" speed="4.0" lodradius0="6" lodradius1="4" lodradius2="3" lodradius3="0.15">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_bullet']">
+    <rule name="dbglodrule_bullet" range="25000.0" sizecontrib="100" speed="1.0" lodradius0="1" lodradius1="1" lodradius2="1" lodradius3="1">
       <connections>
         <tag name="bullet" />
         <tag name="bulletcloud" />
         <tag name="laser" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_bullet_small']">
-    <rule name="dbglodrule_bullet_small" range="400000.0" sizecontrib="100" speed="4.0" priority="2" lodradius0="6" lodradius1="4" lodradius2="3" lodradius3="0.15">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_bullet_small']">
+    <rule name="dbglodrule_bullet_small" range="25000.0" sizecontrib="0" speed="1.0" priority="2" lodradius0="1" lodradius1="1" lodradius2="1" lodradius3="1">
       <connections>
         <tag name="bullet_small" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_effectobject']">
-    <rule name="dbglodrule_effectobject" range="400000.0" lodradius0="46" lodradius1="24" lodradius2="14" lodradius3="0.15">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_effectobject']">
+    <rule name="dbglodrule_effectobject" lodradius0="60" lodradius1="38" lodradius2="34" lodradius3="30.05">
       <connections>
         <tag name="effectobject" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_default']">
-    <rule name="dbglodrule_particle_default" range="40000.0" lodradius="0.25">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_default']">
+    <rule name="dbglodrule_particle_default" lodradius="0.05">
       <connections>
-        <tag name="default_particlelodtag"/>
+        <tag name="default_particlelodtag" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_tinyeffect']">
-    <rule name="dbglodrule_particle_tinyeffect" range="50000.0" lodradius="0.15">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_tinyeffect']">
+    <rule name="dbglodrule_particle_tinyeffect" lodradius="0.2">
       <connections>
-        <tag name="tinyeffect"/>
+        <tag name="tinyeffect" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_smalleffect']">
-    <rule name="dbglodrule_particle_smalleffect" range="100000.0" lodradius="0.1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_smalleffect']">
+    <rule name="dbglodrule_particle_smalleffect" lodradius="0.1">
       <connections>
-        <tag name="smalleffect"/>
+        <tag name="smalleffect" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_mediumeffect']">
-    <rule name="dbglodrule_particle_mediumeffect" range="150000.0" lodradius="0.05">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_mediumeffect']">
+    <rule name="dbglodrule_particle_mediumeffect" lodradius="0.05">
       <connections>
-        <tag name="mediumeffect"/>
+        <tag name="mediumeffect" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_largeeffect']">
-    <rule name="dbglodrule_particle_largeeffect" range="250000.0" lodradius="0.0025">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_largeeffect']">
+    <rule name="dbglodrule_particle_largeeffect" lodradius="0.02">
       <connections>
-        <tag name="largeeffect"/>
+        <tag name="largeeffect" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_megaeffect']">
-    <rule name="dbglodrule_particle_megaeffect" range="450000.0" lodradius="0.001">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_megaeffect']">
+    <rule name="dbglodrule_particle_megaeffect" lodradius="0.001">
       <connections>
-        <tag name="megaeffect"/>
+        <tag name="megaeffect" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_ubereffect']">
-    <rule name="dbglodrule_particle_ubereffect" range="650000.0" lodradius="0.0005">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_ubereffect']">
+    <rule name="dbglodrule_particle_ubereffect" lodradius="0.0005">
       <connections>
-        <tag name="ubereffect"/>
+        <tag name="ubereffect" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_scfx']">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_particle_scfx']">
     <rule name="dbglodrule_particle_scfx" lodradius="0.1">
       <connections>
-        <tag name="scfx"/>
+        <tag name="scfx" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship']">
-    <rule name="dbglodrule_ship" range="75000.0" sizecontrib="65" speed="3.0" priority="0" lodradius0="40" lodradius1="12.0" lodradius2="0.1" lodradius3="0.3">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship']">
+    <rule name="dbglodrule_ship" range="30000.0" sizecontrib="50" speed="2.0" priority="0" lodradius0="30" lodradius1="12.5" lodradius2="1" lodradius3="0.3">
       <connections>
         <tag name="ship" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_xl']">
-    <rule name="dbglodrule_ship_xl" range="450000.0" sizecontrib="60" speed="3.0" priority="1" lodradius0="180" lodradius1="50" lodradius2="5" lodradius3="0.25">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_xl']">
+    <rule name="dbglodrule_ship_xl" range="30000.0" sizecontrib="100" speed="2.0" priority="1" lodradius0="20" lodradius1="10" lodradius2="5" lodradius3="0.5">
       <connections>
         <tag name="ship_xl" />
       </connections>
-    </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_l']">
-    <rule name="dbglodrule_ship_l" range="450000.0" sizecontrib="65" speed="3.0" priority="1" lodradius0="150" lodradius1="40" lodradius2="4" lodradius3="0.25">
+    </rule>    
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_l']">
+    <rule name="dbglodrule_ship_l" range="30000.0" sizecontrib="100" speed="2.0" priority="1" lodradius0="15" lodradius1="7.5" lodradius2="1.75" lodradius3="0.35">
       <connections>
         <tag name="ship_l" />
       </connections>
-    </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_m']">
-    <rule name="dbglodrule_ship_m" range="450000.0" sizecontrib="70" speed="3.0" priority="1" lodradius0="100" lodradius1="30" lodradius2="2" lodradius3="0.25">
+    </rule>     
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_m']">
+    <rule name="dbglodrule_ship_m" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="30" lodradius1="12.5" lodradius2="2" lodradius3="0.5">
       <connections>
         <tag name="ship_m" />
       </connections>
-    </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_s']">
-    <rule name="dbglodrule_ship_s" range="450000.0" sizecontrib="75" speed="3.0" priority="1" lodradius0="50" lodradius1="15" lodradius2="1" lodradius3="0.25">
+    </rule>   
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_s']">
+    <rule name="dbglodrule_ship_s" range="30000.0" sizecontrib="50" speed="2.0" priority="1" lodradius0="30" lodradius1="10" lodradius2="1" lodradius3="0.3">
       <connections>
         <tag name="ship_s" />
       </connections>
-    </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_xs']">
-    <rule name="dbglodrule_ship_xs" range="40000.0" sizecontrib="65" speed="3.0" priority="1" lodradius0="5" lodradius1="1" lodradius2="0.5" lodradius3="0.1">
+    </rule>  	
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_ship_xs']">
+    <rule name="dbglodrule_ship_xs" range="30000.0" sizecontrib="50" speed="2.0"  priority="1" lodradius0="2" lodradius1="1" lodradius2="0.5" lodradius3="0.1">
       <connections>
         <tag name="ship_xs" />
       </connections>
-    </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_masstraffic']">
-    <rule name="dbglodrule_masstraffic" range="25000.0" sizecontrib="65" speed="3.0" lodradius0="3" lodradius1="0.5" lodradius2="0.2" lodradius3="0.1">
+    </rule>  	
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_masstraffic']">
+    <rule name="dbglodrule_masstraffic" range="8000.0" sizecontrib="100" speed="2.0" lodradius0="1" lodradius1="0.5" lodradius2="0.2" lodradius3="0.1">
       <connections>
         <tag name="masstraffic" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_weapon']">
-    <rule name="dbglodrule_weapon" range="25000.0" sizecontrib="80" speed="3.0" lodradius0="30" lodradius1="15" lodradius2="5" lodradius3="3">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_weapon']">
+    <rule name="dbglodrule_weapon" range="8000.0" sizecontrib="100" speed="2.0" lodradius0="30" lodradius1="15" lodradius2="5" lodradius3="2.5">
       <connections>
         <tag name="weapon" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_turret']">
-    <rule name="dbglodrule_turret" range="25000.0" sizecontrib="80" speed="3.0" lodradius0="30" lodradius1="15" lodradius2="5" lodradius3="3">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_turret']">
+    <rule name="dbglodrule_turret" range="20000.0" sizecontrib="50" speed="1.0" lodradius0="50" lodradius1="25" lodradius2="10" lodradius3="5">
       <connections>
         <tag name="turret" />
       </connections>
     </rule>
-  </replace>
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_engine']">
-    <rule name="dbglodrule_engine" range="40000.0" sizecontrib="80" speed="3.0" lodradius0="15" lodradius1="10" lodradius2="3" lodradius3="1">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_engine']">
+    <rule name="dbglodrule_engine" range="20000.0" sizecontrib="100" speed="1.0" lodradius0="10" lodradius1="5" lodradius2="2" lodradius3="1">
       <connections>
         <tag name="engine" />
         <tag name="enginejet" />
       </connections>
     </rule>
-  </replace>
-
-  <replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_asteroids']">
-    <rule name="dbglodrule_asteroids" range="100000.0" priority="1" sizecontrib="1" speed="4.0" lodradius0="40" lodradius1="20" lodradius2="10" lodradius3="5">
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_envmapprobe_m']">
+    <rule name="dbglodrule_envmapprobe_m" lodradius0="20" lodradius1="20" lodradius2="20" lodradius3="7.5">
       <connections>
-        <tag name="asteroid" />
-        <tag name="debris" />
+        <tag name="envmapprobe_lodtag_m" />
       </connections>
     </rule>
-  </replace>
-    
-  
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_envmapprobe_s']">
+    <rule name="dbglodrule_envmapprobe_s" lodradius0="40" lodradius1="40" lodradius2="40" lodradius3="15">
+      <connections>
+        <tag name="envmapprobe_lodtag_s" />
+      </connections>
+    </rule>
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_envmapprobe_xs']">
+    <rule name="dbglodrule_envmapprobe_xs" lodradius0="60" lodradius1="60" lodradius2="60" lodradius3="30">
+      <connections>
+        <tag name="envmapprobe_lodtag_xs" />
+      </connections>
+    </rule>
+</replace>
+<replace sel="//renderparameters/lodrules/rule[@name='dbglodrule_object']">
+    <rule name="dbglodrule_object" range="30000.0" sizecontrib="50" speed="2.0" lodradius0="15" lodradius1="6" lodradius2="2" lodradius3="0.6">
+      <connections>
+        <tag name="object" />
+      </connections>
+    </rule>
+</replace>
 </diff>
