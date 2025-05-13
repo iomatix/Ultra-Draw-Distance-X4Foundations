@@ -1,6 +1,14 @@
 # Ultra Draw Distance
 Increses draw distance, and average FPS value due to setting up LoD values properly.
 
+## Contributions
+
+<a href="https://github.com/iomatix/Ultra-Draw-Distance-X4Foundations/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iomatix/Ultra-Draw-Distance-X4Foundations" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
 ## Supporting Development
 
 My mods are **always free to use**.
